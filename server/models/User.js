@@ -10,7 +10,9 @@ const UserSchema = new Schema({
   friendsChats: [{type: Schema.Types.ObjectId, ref: "FriendChat", default: []}],
   blocked: [{type: Schema.Types.ObjectId, ref: "User", default: []}],
   friendRequests: [{type: Schema.Types.ObjectId, ref: "User", default: []}],
-  guilds: [{type: Schema.Types.ObjectId, ref: "Guild", default: []}]
+  guilds: [{type: Schema.Types.ObjectId, ref: "Guild", default: []}],
+  description: {type: String, default: ""},
+  avatar: {type: String, default: null}
 })
 
 module.exports = model("User", UserSchema)

@@ -4,6 +4,7 @@ const MailService = require("./Mail")
 const FriendChatSchema = require("../models/FriendChat")
 const TokenService = require("./Token")
 const UserDto = require("../dtos/User")
+const path = require("path")
 
 const bcrypt = require("bcrypt")
 const uuid = require("uuid")
@@ -253,6 +254,28 @@ class UserService {
     ])
 
     return userReturn
+  }
+
+  async setAvatar(file, refreshToken) {
+    if(!refreshToken) {
+      throw ApiError.UnauthorizedError()
+    }
+
+    const userData = TokenService.validateRefresh(refreshToken)
+    const tokenDb = await TokenService.findToken(refreshToken)
+
+    if(!tokenDb || !userData) {
+      throw ApiError.UnauthorizedError()
+    }
+    
+    const user = await UserSchema.findById(userData.id)
+
+    user.avatar = file.filename
+    user.save()
+
+    const userPopulate = await this.userPopulate(user)
+
+    return userPopulate
   }
 }
 

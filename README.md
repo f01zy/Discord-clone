@@ -1,3 +1,3 @@
 # Discord 2.0 - FZCord
 
-**Клиентская часть FZCord**
+**Клон discord**

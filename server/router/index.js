@@ -1,8 +1,9 @@
 const Router = require("express").Router
-const router = new Router()
+const router = Router()
 const { body } = require("express-validator")
 const UserController = require("../controllers/User")
 const GuildController = require("../controllers/Guild")
+const File = require("../middlewares/File")
 
 // Auth router
 
@@ -22,6 +23,7 @@ router.get("/auth/refresh", UserController.refresh)
 router.post("/user/friend/add", UserController.friendAdd)
 router.post("/user/friend/confirm", UserController.friendConfirm)
 router.get("/user/invite/:id", UserController.join)
+router.post("/user/avatar/set", File.single("avatar") , UserController.setAvatar)
 
 // Server
 

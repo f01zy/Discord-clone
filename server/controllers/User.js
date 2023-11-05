@@ -99,6 +99,18 @@ class UserController {
       next(e)
     }
   }
+
+  async setAvatar(req, res, next) {
+    try {
+      const {refreshToken} = req.cookies
+      const file = req.file
+      const user = await UserService.setAvatar(file, refreshToken)
+      
+      return res.json(user)
+    } catch (e) {
+      next(e)
+    }
+  }
 }
 
 module.exports = new UserController()

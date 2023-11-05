@@ -17,6 +17,7 @@ app.use(cors({
   credentials: true,
   origin: process.env.CLIENT_URL
 }))
+app.use(express.static(__dirname + "/static"))
 app.use("/api", router)
 app.use(errMiddleware)
 
