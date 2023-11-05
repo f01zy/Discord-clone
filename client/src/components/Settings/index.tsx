@@ -1,9 +1,12 @@
-import { FC, useState } from 'react'
+import { FC, useState, useContext } from 'react'
 import styles from "./Settings.module.scss"
 import SettingsJson from "../../maps/Settings.json"
 import MyAccount from './MyAccount'
+import { Context } from '../../main'
+import { observer } from 'mobx-react-lite'
 
 const Settings:FC = ():JSX.Element => {
+  const {store} = useContext(Context)
   const [page, setPage] = useState("Моя учетная запись")
 
   return (
@@ -25,7 +28,10 @@ const Settings:FC = ():JSX.Element => {
             </div>
           ))}
           <div className={styles.aside_relative_block}>
-            <div className={styles.aside_block}>
+            <div className={styles.aside_block} onClick={() => {
+              store.logout()
+              store.setSettingsMenu(false)
+            }}>
               <h4>Выйти</h4>
             </div>
           </div>
@@ -40,4 +46,4 @@ const Settings:FC = ():JSX.Element => {
   )
 }
 
-export default Settings
+export default observer(Settings)

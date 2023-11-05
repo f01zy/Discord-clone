@@ -1,9 +1,26 @@
 import { FC, useContext } from 'react'
 import styles from "./MyAccount.module.scss"
 import { Context } from '../../../main'
+import $api, { API_URL, SERVER_URL } from '../../../http'
+import { observer } from 'mobx-react-lite'
 
 const MyAccount:FC = ():JSX.Element => {
   const {store} = useContext(Context)
+
+  const handleChange = async (file: File) => {
+    if(file) {
+      const data = new FormData()
+      data.append("avatar", file)
+
+      const res = await $api.post(API_URL + "/user/edit/avatar/set", data, {
+        headers: {
+          "content-type": "mulpipart/form-data"
+        }
+      })
+      
+      store.setUser(res.data)
+    }
+  }
 
   return (
     <>
@@ -23,8 +40,17 @@ const MyAccount:FC = ():JSX.Element => {
 
             </div>
             <div className={styles.user_top_info}>
-              <div className={styles.avatar}>
+              <div className={styles.avatar} style={{
+                backgroundImage: `url("${SERVER_URL}/avatars/${store.user.avatar}")`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat"
+              }}>
+                <input type="file" onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                  const files = e.target.files
 
+                  if(!files) return
+                  handleChange(files[0])
+                }} />
               </div>
               <h4>{store.user.username}</h4>
               <button>Редактировать профиль пользователя</button>
@@ -79,4 +105,4 @@ const MyAccount:FC = ():JSX.Element => {
   )
 }
 
-export default MyAccount
+export default observer(MyAccount)

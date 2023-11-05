@@ -101,7 +101,7 @@ export default class Store {
 
   async join(link:string) {
     try {
-      const res = await axios.get(`${API_URL}/join/${link}`, {withCredentials: true})
+      const res = await axios.get(`${API_URL}/user/invite/${link}`, {withCredentials: true})
       this.setUser(res.data.user)
     } catch (e) {
       console.log(e);

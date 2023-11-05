@@ -73,7 +73,7 @@ const App = () => {
         <Route path='/channels/:guild/:category/:channel' element={<Guild socket={socket} />}/>
         <Route path='/login' element={<Login />}/>
         <Route path='/register' element={<Register />}/>
-        <Route path='/channels/join/:link' element={<Join />}/>
+        <Route path='/channels/invite/:link' element={<Join />}/>
         <Route path='/channels/@me' element={<Me socket={socket} />}/>
         <Route path='/channels/@me/:username' element={<UserChat socket={socket} />}/>
       </Routes>

@@ -76,6 +76,13 @@ $index: calc(1vh + 1vw);
             background: #000;
             border-radius: 50%;
             border: 5px solid #1E1F22;
+            overflow: hidden;
+
+            input {
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+            }
           }
   
           h4 {

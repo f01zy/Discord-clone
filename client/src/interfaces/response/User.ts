@@ -10,5 +10,7 @@ export default interface IUser {
   friends:Array<IUser>,
   blocked:Array<IUser>,
   friendRequests:Array<IUser>,
-  friendsChats:Array<IFriendChat>
+  friendsChats:Array<IFriendChat>,
+  avatar:string,
+  description:string
 }

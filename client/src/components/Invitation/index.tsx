@@ -34,8 +34,8 @@ const Invitation:FC<IGuild> = (props):JSX.Element => {
           <div className={styles.link}>
             <h4>Отправте другу ссылку-приглашение на сервер</h4>
             <div className={styles.field}>
-              <p>{CLIENT_URL}/channels/join/{guild?._id}</p>
-              <button onClick={() => copy(`${CLIENT_URL}/channels/join/${guild?._id}`)} className={copyState ? styles.button_copy : styles.button} >{text}</button>
+              <p>{CLIENT_URL}/channels/invite/{guild?._id}</p>
+              <button onClick={() => copy(`${CLIENT_URL}/channels/invite/${guild?._id}`)} className={copyState ? styles.button_copy : styles.button} >{text}</button>
             </div>
           </div>
         </div>

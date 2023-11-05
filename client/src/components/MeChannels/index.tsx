@@ -40,7 +40,7 @@ const MeChannels:FC = ():JSX.Element => {
         </div>
         {store.user.friendsChats.map((e, index) => (
           <div className={styles.chat} key={index}>
-            <User username={e.user.username} status="test" id={e.user._id} />
+            <User username={e.user.username} status="test" id={e.user._id} avatar={e.user.avatar} />
           </div>
         ))}
       </div>

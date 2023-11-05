@@ -4,6 +4,7 @@ const MailService = require("./Mail")
 const FriendChatSchema = require("../models/FriendChat")
 const TokenService = require("./Token")
 const UserDto = require("../dtos/User")
+const fs = require("fs")
 const path = require("path")
 
 const bcrypt = require("bcrypt")
@@ -261,6 +262,10 @@ class UserService {
       throw ApiError.UnauthorizedError()
     }
 
+    if(!file) {
+      throw ApiError.BadRequest("Поле file является обязательным")
+    }
+
     const userData = TokenService.validateRefresh(refreshToken)
     const tokenDb = await TokenService.findToken(refreshToken)
 
@@ -270,10 +275,19 @@ class UserService {
     
     const user = await UserSchema.findById(userData.id)
 
+    if(user.avatar != "default.jpg") {
+      const pathAvatar = path.join(__dirname, "/..", "/static", "/avatars", user.avatar)
+      console.log(pathAvatar);
+      fs.unlink(pathAvatar, () => {
+        console.log("deleted");
+      })
+    }
+
     user.avatar = file.filename
     user.save()
 
-    const userPopulate = await this.userPopulate(user)
+    const userReturn = await UserSchema.findById(userData.id)
+    const userPopulate = await this.userPopulate(userReturn)
 
     return userPopulate
   }

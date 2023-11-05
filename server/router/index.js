@@ -23,7 +23,7 @@ router.get("/auth/refresh", UserController.refresh)
 router.post("/user/friend/add", UserController.friendAdd)
 router.post("/user/friend/confirm", UserController.friendConfirm)
 router.get("/user/invite/:id", UserController.join)
-router.post("/user/avatar/set", File.single("avatar") , UserController.setAvatar)
+router.post("/user/edit/avatar/set", File.single("avatar") , UserController.setAvatar)
 
 // Server
 

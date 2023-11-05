@@ -1,5 +1,6 @@
 export default interface IUserComponent {
   username:string,
   status?:string,
-  id:string
+  id:string,
+  avatar:string
 }
