@@ -1,0 +1,50 @@
+$index: calc(1vh + 1vw);
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
+  .avatar {
+    width: calc($index * 1.5);
+    height: calc($index * 1.5);
+    border-radius: 50%;
+    background: #000;
+    position: relative;
+
+    .avatar_status {
+      width: calc($index * .7);
+      height: calc($index * .7);
+      background: #292B2F;
+      position: absolute;
+      border-radius: 50%;
+      right: 0;
+      bottom: 0;
+
+      svg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  .username {
+    margin-left: 10px;
+
+    h4 {
+      color: #8E9297;
+      font-weight: 500;
+      font-size: calc($index * .75);
+      margin-bottom: -3px;
+    }
+
+    p {
+      color: #8E9297;
+      font-size: calc($index * .6);
+    }
+  }
+}

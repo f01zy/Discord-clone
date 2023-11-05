@@ -1,0 +1,134 @@
+$index: calc(1vh + 1vw);
+
+.register {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../../auth/auth.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .form {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 40%;
+    height: fit-content;
+    background: #36393F;
+    border-radius: 8px;
+    padding: 35px 40px;
+    
+    h2 {
+      text-align: center;
+      color: #fafafa;
+      margin-bottom: 40px;
+    }
+
+    .input {
+      margin-bottom: 20px;
+
+      p {
+        color: #B9BBBE;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: calc($index * .65);
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        height: calc($index * 2);
+        background: #1E1F22;
+        border: 0;
+        border-radius: 5px;
+        color: #fafafa;
+        padding: 0 10px;
+      }
+    }
+
+    .input_error {
+      margin-bottom: 20px;
+
+      p {
+        color: #DC3545;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: calc($index * .65);
+        margin-bottom: 5px;
+        font-weight: 600;
+
+        span {
+          text-transform: none;
+          font-size: calc($index * .60);
+        }
+      }
+
+      a {
+        color: #1d86af;
+        font-size: calc($index * .65);
+      }
+
+      input {
+        width: 100%;
+        height: calc($index * 2);
+        background: #1E1F22;
+        border: 0;
+        border-radius: 5px;
+        color: #fafafa;
+        padding: 0 10px;
+      }
+    }
+
+    .checkbox {
+      display: flex;
+      margin-bottom: 20px;
+
+      p {
+        color: #B9BBBE;
+        font-size: calc($index * .6);
+        font-weight: 500;
+      }
+
+      input {
+        margin-right: 20px;
+        width: calc($index * 2);
+        background: #36393F;
+        border: 0;
+      }
+    }
+
+    .button {
+      margin-bottom: 20px;
+
+      button {
+        width: 100%;
+        height: calc($index * 2);
+        border: 0;
+        background: #5865F2;
+        border-radius: 5px;
+        color: #fafafa;
+        font-weight: 500;
+        font-size: calc($index * .7);
+        margin-bottom: 5px;
+      }
+
+      p {
+        color: #B9BBBE;
+        font-size: calc($index * .6);
+
+        a {
+          color: #1d86af;
+        }
+      }
+    }
+
+    .login_link {
+      a {
+        color: #1d86af;
+        font-size: calc($index * .7);
+      }
+    }
+  }
+}

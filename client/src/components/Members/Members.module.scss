@@ -1,0 +1,68 @@
+$index: calc(1vw + 1vh);
+
+.members {
+  width: 30%;
+  height: calc(100vh - $index * 2.5);
+  margin-top: calc($index * 2.5);
+  background: #2F3136;
+  padding: 0 15px;
+
+  @media (max-width: 1000px) {
+    width: 30%;
+  }
+
+  @media (max-width: 780px) {
+    width: 55%;
+  }
+
+  .role {
+    margin-top: calc($index);
+
+    h4 {
+      color: #8E9297;
+      font-size: calc($index * .7);
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+  
+      .avatar {
+        width: calc($index * 1.7);
+        height: calc($index * 1.7);
+        border-radius: 50%;
+        background: #000;
+        position: relative;
+  
+        .avatar_status {
+          width: calc($index * .7);
+          height: calc($index * .7);
+          background: #292B2F;
+          position: absolute;
+          border-radius: 50%;
+          right: 0;
+          bottom: 0;
+  
+          svg {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+        }
+      }
+  
+      .username {
+        margin-left: 10px;
+  
+        h4 {
+          color: #fafafa;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

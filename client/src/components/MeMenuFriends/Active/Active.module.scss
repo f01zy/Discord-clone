@@ -1,0 +1,79 @@
+$index: calc(1vh + 1vw);
+
+.active {
+  width: 35%;
+  right: 0;
+  height: calc(100vh - ($index * 2.5));
+  border-left: 1px solid #26282C;
+  padding: 20px 20px;
+
+  h2 {
+    color: #fafafa;
+    font-size: calc($index);
+  }
+
+  .active_contact {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding: 15px 10px;
+    border-radius: 7px;
+    background: #2B2D31;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid #26282C;
+
+    .user {
+      display: flex;
+      align-items: center;
+
+      .avatar {
+        width: calc($index * 1.7);
+        height: calc($index * 1.7);
+        border-radius: 50%;
+        background: #000;
+        position: relative;
+
+        .avatar_status {
+          width: calc($index * .7);
+          height: calc($index * .7);
+          background: #292B2F;
+          position: absolute;
+          border-radius: 50%;
+          right: 0;
+          bottom: 0;
+
+          svg {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+        }
+      }
+
+      .username {
+        margin-left: 10px;
+
+        h4 {
+          color: #fafafa;
+          font-weight: 500;
+          font-size: calc($index * .8);
+          margin-bottom: -3px;
+        }
+
+        p {
+          color: #fafafa;
+          font-size: calc($index * .7);
+        }
+      }
+    }
+
+    &:hover {
+      background: #111214;
+    }
+  }
+}

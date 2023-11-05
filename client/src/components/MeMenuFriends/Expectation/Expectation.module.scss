@@ -1,0 +1,194 @@
+$index: calc(1vh + 1vw);
+
+.expectation {
+  position: relative;
+  width: 65%;
+
+  .error {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+
+    p {
+      text-align: center;
+      margin-top: 20px;
+      color: #B9BBBE;
+      font-size: calc($index * .7);
+    }
+  }
+
+  .search {
+    width: 100%;
+    height: calc($index * 3);
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 100%;
+      height: calc($index * 1.7);
+      background: #202225;
+      border-radius: 4px;
+      border: 0;
+      padding: 0 10px;
+
+      &::placeholder {
+        color: #B9BBBE;
+        font-weight: 500;
+        font-size: calc($index * .7);
+      }
+    }
+  }
+
+  .expectations {
+    margin-top: 20px;
+
+    .expectation_count {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 0 30px;
+
+      h4 {
+        color: #B9BBBE;
+        font-size: calc($index * .65);
+        text-transform: uppercase;
+      }
+    }
+
+    .expectation_content {
+      width: 100%;
+      padding: 0 20px;
+
+      .element {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        padding: 10px 10px;
+        border-top: 1px solid #3d3f46;
+        border-radius: 5px;
+        justify-content: space-between;
+
+        .user {
+          display: flex;
+          align-items: center;
+        
+          .avatar {
+            width: calc($index * 1.7);
+            height: calc($index * 1.7);
+            border-radius: 50%;
+            background: #000;
+            position: relative;
+        
+            .avatar_status {
+              width: calc($index * .7);
+              height: calc($index * .7);
+              background: #292B2F;
+              position: absolute;
+              border-radius: 50%;
+              right: 0;
+              bottom: 0;
+        
+              svg {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+              }
+            }
+          }
+        
+          .username {
+            margin-left: 10px;
+        
+            h4 {
+              color: #fafafa;
+              font-weight: 500;
+              font-size: calc($index * .8);
+              margin-bottom: -3px;
+            }
+        
+            p {
+              color: #fafafa;
+              font-size: calc($index * .7);
+            }
+          }
+        }
+
+        .buttons {
+          display: flex;
+          align-items: center;
+
+          .success_button {
+            width: calc($index * 1.8);
+            height: calc($index * 1.8);
+            background: #2F3136;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+
+            svg {
+              width: calc($index * 1);
+              
+              path {
+                transition: fill .2s ease;
+              }
+            }
+
+            &:hover {
+              svg {
+                path {
+                  fill: #3BA55D;
+                  transition: fill .2s ease;
+                }
+              }
+            }
+          }
+
+          .error_button {
+            width: calc($index * 1.8);
+            height: calc($index * 1.8);
+            background: #2F3136;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+
+            svg {
+              width: calc($index * 1);
+
+              path {
+                transition: fill .2s ease;
+              }
+            }
+
+            &:hover {
+              svg {
+                path {
+                  fill: #F23F42;
+                  transition: fill .2s ease;
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          background: #3d3f46;
+        }
+      }
+    }
+  }
+}

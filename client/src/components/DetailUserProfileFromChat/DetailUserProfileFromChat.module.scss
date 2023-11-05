@@ -1,0 +1,112 @@
+$index: calc(1vw + 1vh);
+
+.detailUserProfileFromChat {
+  width: 50%;
+  height: calc(100vh - $index * 2.5);
+  margin-top: calc($index * 2.5);
+  background: #2F3136;
+  position: relative;
+
+  .banner {
+    width: 100%;
+    height: 20%;
+    background: #000;
+  }
+
+  .avatar {
+    position: absolute;
+    width: calc($index * 4.7);
+    height: calc($index * 4.7);
+    background: red;
+    border-radius: 50%;
+    border: 7px solid #2F3136;
+    top: calc(20% - $index * 4.7 / 2);
+    left: calc($index * 1);
+  }
+
+  .info_block_container {
+    margin-top: calc($index * 4.7 / 2 + 20px);
+    padding: 0 20px;
+
+    .info_block {
+      padding: 15px 10px;
+      border-radius: 8px;
+      width: 100%;
+      height: fit-content;
+      background: #111214;
+
+      .username_block {
+        position: relative;
+        padding-bottom: 10px;
+
+        h3 {
+          color: #fafafa;
+          font-weight: 500;
+        }
+
+        h4 {
+          color: #fafafa;
+          font-size: calc($index * .7);
+          font-weight: 500;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: #2F3136;
+        }
+      }
+
+      .desc_block {
+        padding-bottom: 10px;
+        position: relative;
+
+        h4 {
+          margin-top: 15px;
+          color: #fafafa;
+          font-size: calc($index * .6);
+          text-transform: uppercase;
+        }
+
+        p {
+          color: #B9BBBE;
+          font-size: calc($index * .65);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: #2F3136;
+        }
+      }
+
+      .note {
+        margin-top: 10px;
+
+        h4 {
+          color: #fafafa;
+          font-size: calc($index * .6);
+          text-transform: uppercase;
+        }
+
+        textarea {
+          margin-top: 5px;
+          width: 100%;
+          height: calc($index * 1.7);
+          background: none;
+          border: none;
+          resize: none;
+          color: #B9BBBE;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,243 @@
+$index: calc(1vh + 1vw);
+
+.userChat {
+  margin-left: 22%;
+  width: 78%;
+  height: 100vh;
+  background: #36393F;
+  position: relative;
+
+  @media (max-width: 1000px) {
+    margin-left: 30%;
+    width: 70%;
+  }
+  
+  @media (max-width: 780px) {
+    margin-left: 34%;
+    width: 66%;
+  }
+
+  .top_btns {
+    width: 78%;
+    height: calc($index * 2.5);
+    background: #36393F;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 1px solid #26282C;
+    position: fixed;
+
+    @media (max-width: 1000px) {
+      width: 70%;
+    }
+
+    @media (max-width: 780px) {
+      width: 66%;
+    }
+
+    .channel_name {
+      .user {
+        display: flex;
+        align-items: center;
+      
+        .avatar {
+          width: calc($index * 1.3);
+          height: calc($index * 1.3);
+          border-radius: 50%;
+          background: #000;
+          position: relative;
+      
+          .avatar_status {
+            width: calc($index * .5);
+            height: calc($index * .5);
+            background: #292B2F;
+            position: absolute;
+            border-radius: 50%;
+            right: 0;
+            bottom: 0;
+      
+            svg {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+            }
+          }
+        }
+      
+        .username {
+          margin-left: 10px;
+      
+          h4 {
+            color: #fafafa;
+            font-weight: 500;
+            font-size: calc($index * .8);
+            margin-bottom: -3px;
+          }
+        }
+      }
+    }
+
+    .top_btns_buttons {
+      display: flex;
+      align-items: center;
+
+      input {
+        background: #202225;
+        border: 0;
+        width: calc($index * 7);
+        height: calc($index * 1.2);
+        border-radius: 3px;
+        padding: 0 5px;
+        color: #fafafa;
+        margin-left: 15px;
+
+        &::placeholder {
+          color: #72767D;
+        }
+      }
+
+      svg {
+        fill: #B9BBBE;
+        font-size: calc($index * 1.2);
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+
+    .messages_container {
+      height: calc(100vh - ($index * 3));
+      background: #36393F;
+      padding-bottom: calc($index * 2.5);
+      top: calc($index * 2.5 + 10px);
+      position: relative;
+      overflow: auto;
+      width: 100%;
+
+      &::-webkit-scrollbar {
+        background: #2B2D31;
+        width: calc($index * .5);
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #1A1B1E;
+        border-radius: 10px;
+      }
+  
+      .messages {
+        padding: 30px 30px;
+    
+        .greeting {
+          margin-bottom: 30px;
+    
+          h1 {
+            color: #fafafa;
+            margin-bottom: 5px;
+          }
+    
+          p {
+            color: #afafaf;
+          }
+        }
+        
+        .message {
+          display: flex;
+          margin-top: 20px;
+    
+          .left {
+            margin-right: 10px;
+    
+            .avatar {
+              width: calc($index * 2);
+              height: calc($index * 2);
+              background: #111;
+              border-radius: 50%;
+            }
+          }
+    
+          .right {
+            .username {
+              font-size: calc($index * .85);
+              color: #F1BB29;
+            }
+    
+            .message_text {
+              font-size: calc($index * .85);
+              color: #fafafa;
+            }
+          }
+        }
+      }
+
+      .input_message {
+        width: 100%;
+        height: calc($index * 2.2);
+        position: absolute;
+        bottom: 20px;
+        padding: 0 30px;
+        display: flex;
+    
+        .icon {
+          height: 100%;
+          width: calc($index * 3);
+          background: #40444B;
+          display: flex;
+          align-items: center;
+          padding: 0 15px;
+          position: absolute;
+          border-radius: 10px;
+          
+          svg {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+        }
+    
+        input {
+          width: 100%;
+          height: 100%;
+          border: 0;
+          background: #40444B;
+          color: #fafafa;
+          padding: 0 calc($index * 3);
+          border-radius: 10px;
+    
+          &::placeholder {
+            color: #666;
+            font-size: calc($index * .75);
+          }
+        }
+    
+        .left_icons {
+          position: absolute;
+          right: 45px;
+          height: 100%;
+          width: auto;
+          border-radius: 10px;
+          background: #40444B;
+          display: flex;
+          align-items: center;
+    
+        
+          svg {
+            &:last-child {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

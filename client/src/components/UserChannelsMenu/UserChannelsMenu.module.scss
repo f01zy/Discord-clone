@@ -1,0 +1,71 @@
+$index: calc(1vh + 1vw);
+
+.profile {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: calc($index * 2.5);
+  background: #292B2F;
+  display: flex;
+  align-items: center;
+
+  .user {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+    .left {
+      .avatar {
+        width: calc($index * 1.7);
+        height: calc($index * 1.7);
+        border-radius: 50%;
+        background: #000;
+        position: relative;
+
+        .avatar_status {
+          width: calc($index * .7);
+          height: calc($index * .7);
+          background: #292B2F;
+          position: absolute;
+          border-radius: 50%;
+          right: 0;
+          bottom: 0;
+
+          svg {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    .right {
+      margin-left: 5px;
+
+      h4 {
+        font-size: calc($index * .7);
+        color: #fafafa;
+        font-weight: 400;
+      }
+
+      p {
+        color: #C7C9CB;
+        font-size: calc($index * .6);
+      }
+    }
+  }
+
+  .buttons {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 10px;
+    }
+  }
+}

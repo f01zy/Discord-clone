@@ -1,0 +1,83 @@
+$index: calc(1vh + 1vw);
+
+.MeChannels {
+  width: 17%;
+  margin-left: 5%;
+  background: #2F3136;
+  height: 100vh;
+  position: fixed;
+
+  @media (max-width: 1000px) {
+    margin-left: 7%;
+    width: 23%;
+  }
+
+  @media (max-width: 780px) {
+    width: 27%;
+  }
+
+  .top_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    height: calc($index * 2.5);
+    border-bottom: 1px solid #1f2023;
+
+    input {
+      width: 90%;
+      height: calc($index * 1.4);
+      background: #202225;
+      border-radius: 4px;
+      border: 0;
+      padding: 0 5px;
+
+      &::placeholder {
+        color: #B9BBBE;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .top_links {
+    padding: 10px 10px;
+
+    .top_link_block {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: calc($index * 2.1);
+      border-radius: 4px;
+      margin-bottom: 5px;
+      padding: 0 10px;
+
+      h4 {
+        color: #8E9297;
+        font-weight: 500;
+        margin-left: 10px;
+      }
+
+      &:hover {
+        background: #3d3f46;
+      }
+    }
+  }
+
+  .chats {
+    padding: 0 15px;
+
+    .create_chat {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      h4 {
+        color: #8E9297;
+        font-weight: 500;
+        font-size: calc($index * .65);
+        text-transform: uppercase;
+      }
+    }
+  }
+}

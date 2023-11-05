@@ -1,0 +1,129 @@
+$index: calc(1vh + 1vw);
+
+.MeMenuFriends {
+  margin-left: 22%;
+  width: 78%;
+  height: 100vh;
+  background: #36393F;
+  position: relative;
+  margin-bottom: 100px;
+
+  @media (max-width: 1000px) {
+    margin-left: 30%;
+    width: 70%;
+  }
+  
+  @media (max-width: 780px) {
+    margin-left: 34%;
+    width: 66%;
+  }
+
+  .top_btns {
+    width: 100%;
+    height: calc($index * 2.5);
+    background: #36393F;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 1px solid #26282C;
+
+    @media (max-width: 1000px) {
+      width: 70%;
+    }
+
+    @media (max-width: 780px) {
+      width: 66%;
+    }
+
+    .name_channel {
+      display: flex;
+      padding-right: 10px;
+      position: relative;
+      align-items: center;
+
+      h4 {
+        color: #fafafa;
+        margin-left: 10px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -5px;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: #72767D;
+      }
+    }
+
+    .buttons_content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      margin-left: 15px;
+
+      .buttons {
+        display: flex;
+        align-items: center;
+
+        .button {
+          button {
+            padding: 2px 10px;
+            color: #B9BBBE;
+            font-size: calc($index * .75);
+            margin-right: 10px;
+            font-weight: 500;
+            border: 0;
+            background: none;
+            border-radius: 3px;
+          }
+
+          &:last-child {
+            button {
+              background: #3BA55D;
+              color: #fafafa;
+            }
+          }
+        }
+
+        .button_active {
+          button {
+            padding: 2px 10px;
+            color: #B9BBBE;
+            font-size: calc($index * .75);
+            margin-right: 10px;
+            font-weight: 500;
+            border: 0;
+            background: none;
+            border-radius: 3px;
+            background: #4e4f52;
+          }
+
+          &:last-child {
+            button {
+              background: none;
+              color: #48c971;
+            }
+          }
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+
+      svg {
+        fill: #B9BBBE;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .MeMenuFriendsBottomContent {
+    position: relative;
+    display: flex;
+  }
+}

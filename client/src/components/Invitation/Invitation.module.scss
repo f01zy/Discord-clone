@@ -1,0 +1,94 @@
+$index: calc(1vh + 1vw);
+
+.invitation {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, .8);
+  z-index: 1;
+
+  .form {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: calc($index * 22);
+    height: fit-content;
+    background: #36393F;
+    border-radius: 8px;
+    padding: 20px 20px;
+
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+
+      svg {
+        font-size: calc($index * 1.2);
+        color: #8E9297;
+      }
+    }
+
+    h3 {
+      color: #fafafa;
+      font-size: calc($index * .8);
+      margin-bottom: 20px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    .link {
+      h4 {
+        text-transform: uppercase;
+        font-size: calc($index * .65);
+        margin-bottom: 5px;
+        color: #8E9297;
+        margin-bottom: 5px;
+      }
+
+      .field {
+        width: 100%;
+        height: calc($index * 2);
+        background: #1E1F22;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 0 3px;
+        padding-left: 10px;
+
+        p {
+          color: #8E9297;
+          overflow: hidden;
+          width: 80%;
+          font-size: calc($index * .7);
+        }
+
+        .button {
+          width: calc($index * 3);
+          height: 84%;
+          background: #5865F2;
+          border-radius: 3px;
+          color: #fafafa;
+          border: 0;
+          font-weight: 600;
+        }
+
+        .button_copy {
+          width: calc($index * 3);
+          height: 84%;
+          background: rgb(30, 165, 30);
+          border-radius: 3px;
+          color: #fafafa;
+          border: 0;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
