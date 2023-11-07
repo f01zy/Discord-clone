@@ -1,13 +1,10 @@
-import { FC, useContext } from 'react'
+import { FC } from 'react'
 import styles from "./User.module.scss"
 import IUserComponent from '../../interfaces/components/User'
 import { Link } from 'react-router-dom'
 import { SERVER_URL } from '../../http'
-import { Context } from '../../main'
 
 const User:FC<IUserComponent> = (props):JSX.Element => {
-  const {store} = useContext(Context)
-
   return (
     <>
     

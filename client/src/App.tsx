@@ -66,7 +66,7 @@ const App = () => {
   }
 
   return (
-    <>
+    <div style={{display: "flex"}}>
     
     <BrowserRouter>
       <Routes>
@@ -79,7 +79,7 @@ const App = () => {
       </Routes>
     </BrowserRouter>
     
-    </>
+    </div>
   )
 }
 

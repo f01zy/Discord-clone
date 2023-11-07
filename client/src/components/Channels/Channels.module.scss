@@ -2,19 +2,9 @@ $index: calc(1vh + 1vw);
 
 .channels {
   width: 17%;
-  margin-left: 5%;
   background: #2F3136;
   height: 100vh;
-  position: fixed;
-
-  @media (max-width: 1000px) {
-    margin-left: 7%;
-    width: 23%;
-  }
-
-  @media (max-width: 780px) {
-    width: 27%;
-  }
+  position: relative;
 
   .top_server_info {
     width: 100%;

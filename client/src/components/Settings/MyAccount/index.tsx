@@ -45,7 +45,7 @@ const MyAccount:FC = ():JSX.Element => {
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat"
               }}>
-                <input type="file" onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                <input type="file" accept='image/*' onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                   const files = e.target.files
 
                   if(!files) return

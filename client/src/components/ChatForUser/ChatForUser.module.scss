@@ -1,21 +1,10 @@
 $index: calc(1vh + 1vw);
 
 .userChat {
-  margin-left: 22%;
   width: 78%;
   height: 100vh;
   background: #36393F;
   position: relative;
-
-  @media (max-width: 1000px) {
-    margin-left: 30%;
-    width: 70%;
-  }
-  
-  @media (max-width: 780px) {
-    margin-left: 34%;
-    width: 66%;
-  }
 
   .top_btns {
     width: 78%;
@@ -27,14 +16,6 @@ $index: calc(1vh + 1vw);
     padding: 0 30px;
     border-bottom: 1px solid #26282C;
     position: fixed;
-
-    @media (max-width: 1000px) {
-      width: 70%;
-    }
-
-    @media (max-width: 780px) {
-      width: 66%;
-    }
 
     .channel_name {
       .user {

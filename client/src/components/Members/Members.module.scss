@@ -7,14 +7,6 @@ $index: calc(1vw + 1vh);
   background: #2F3136;
   padding: 0 15px;
 
-  @media (max-width: 1000px) {
-    width: 30%;
-  }
-
-  @media (max-width: 780px) {
-    width: 55%;
-  }
-
   .role {
     margin-top: calc($index);
 

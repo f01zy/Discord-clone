@@ -12,6 +12,11 @@ $index: calc(1vh + 1vw);
     background: #000;
     position: relative;
 
+    @media (max-width: 800px) {
+      width: calc($index * 1.9);
+      height: calc($index * 1.9);
+    }
+
     .avatar_status {
       width: calc($index * .7);
       height: calc($index * .7);
@@ -40,11 +45,19 @@ $index: calc(1vh + 1vw);
       font-weight: 500;
       font-size: calc($index * .75);
       margin-bottom: -3px;
+
+      @media (max-width: 800px) {
+        font-size: calc($index * .9);
+      }      
     }
 
     p {
       color: #8E9297;
       font-size: calc($index * .6);
+
+      @media (max-width: 800px) {
+        font-size: calc($index * .8);
+      }
     }
   }
 }

@@ -9,6 +9,14 @@ $index: calc(1vh + 1vw);
   display: flex;
   align-items: center;
 
+  @media (max-width: 800px) {
+    height: calc($index * 3);
+  }
+
+  @media (max-width: 340px) {
+    height: calc($index * 3.5);
+  }
+
   .user {
     display: flex;
     align-items: center;
@@ -21,6 +29,11 @@ $index: calc(1vh + 1vw);
         border-radius: 50%;
         background: #000;
         position: relative;
+
+        @media (max-width: 430px) {
+          width: calc($index * 2.5);
+          height: calc($index * 2.5);
+        }
 
         .avatar_status {
           width: calc($index * .7);
@@ -50,11 +63,19 @@ $index: calc(1vh + 1vw);
         font-size: calc($index * .7);
         color: #fafafa;
         font-weight: 400;
+
+        @media (max-width: 500px) {
+          font-size: calc($index);
+        }
       }
 
       p {
         color: #C7C9CB;
         font-size: calc($index * .6);
+
+        @media (max-width: 500px) {
+          font-size: calc($index * .8);
+        }
       }
     }
   }

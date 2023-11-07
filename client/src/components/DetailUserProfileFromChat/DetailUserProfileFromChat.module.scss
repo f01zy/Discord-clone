@@ -22,6 +22,27 @@ $index: calc(1vw + 1vh);
     border: 7px solid #2F3136;
     top: calc(20% - $index * 4.7 / 2);
     left: calc($index * 1);
+
+    .avatar_status {
+      width: calc($index * 1.1);
+      height: calc($index * 1.1);
+      background: #2F3136;
+      position: absolute;
+      border-radius: 50%;
+      right: 2px;
+      bottom: 2px;
+
+      svg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 70%;
+        height: 70%;
+      }
+    }
   }
 
   .info_block_container {
